@@ -1,27 +1,46 @@
 <!-- miniprogram/pages/dangan/dangan.wxml -->
-<view class="dang_an">
+<view class="dang_an" wx:for="{{arrdang}}" wx:key="id">
     <view class="tou" bindtap="to_bianji">
         <view class="tou_tu">
             <view class="tou_png"></view>
-            <image class="lei_pic" src="../../img/mao.png" />
         </view>
         <view class="con_zhu">
             <view class="con_name">
-                <view class="name">超级大黄</view>
-                <image class="sex" src="../../img/xiong.png" />
+                <view class="name">{{item.mz_value}}</view>
+                <image wx:if="{{item.zi_cli}}" class="sex" src="../../img/xiong.png" />
+                <image wx:if="{{item.zhu_cli}}" class="sex" src="../../img/ci.png" />
                 <view class="age">10岁 11个月</view>
-                <view class="kg">23Kg</view>
+                <view class="kg">{{item.tz_value}}Kg</view>
             </view>
             <view class="con_fu">
-                <view class="color">黄白色</view>
-                <view class="sort">阿拉斯加雪橇犬</view>
-                <view class="jueyu">已绝育</view>
+                <view class="color">
+                    {{item.color_mao}}
+                    <image wx:if="{{item.cat}}" class="lei_pic" src="../../img/mao.png" />
+                    <image wx:if="{{item.dog}}" class="lei_pic" src="../../img/gou.png" />
+                </view>
+                <view class="sort">{{item.pz_value}}</view>
+                <view wx:if="{{item.yijue_cli}}" class="jueyu">已绝育</view>
+                <view wx:if="{{item.weijue_cli}}" class="jueyu">未绝育</view>
             </view>
         </view>
     </view>
-    <view class="tian">
-        <van-button bind:click="to_jia" round color="linear-gradient(to right,rgb(255, 115, 90), rgb(255, 187, 0))" custom-style=" width: 670rpx;height: 80rpx;" icon="plus">
+    <!-- <view class="tian">
+        <van-button bind:click="to_jia" round color="linear-gradient(to right,rgba(255, 115, 90,0.85), rgba(255, 187, 0,0.85))" custom-style=" width: 670rpx;height: 80rpx;" icon="plus">
             添 加
         </van-button>
-    </view>
+    </view> -->
+</view>
+<view class="backnews" wx:if="{{arrdang.length==0}}">
+    <image src="../../img/kong.png" class="pickong"></image>
+    <view>快添加新内容吧～～</view>
+</view>
+<view style="height:2vh;"></view>
+<view class="loading" wx:if="{{loading}}">
+    <van-loading type="spinner" color="#505050" size="21px" text-size="12px">正在加载...</van-loading>
+</view>
+<!-- <view  class="newsdown">已经到底了哦~</view> -->
+<view style="height:2vh;"></view>
+<view class="add" bindtap="to_jia">
+    <image src="../../img/j2.png" class="pic_add" />
+    <text>添加</text>
 </view>

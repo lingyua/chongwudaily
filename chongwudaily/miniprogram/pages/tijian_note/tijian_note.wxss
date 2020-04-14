@@ -1,0 +1,112 @@
+/* miniprogram/pages/tijian_note/tijian_note.wxss */
+.note {
+    padding: 35rpx 0 0 0;
+}
+
+.cw_info {
+    display: flex;
+    align-items: center;
+}
+
+.cw-avatar {
+    width: 75rpx;
+    height: 75rpx;
+    margin: 0 0 0 20rpx;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #505050;
+}
+
+.head {
+    height: 80rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cw-nickname {
+    font-size: 14px;
+    font-weight: bolder;
+    padding: 0 0 0 20rpx;
+    color: #333366;
+}
+
+.now_time {
+    font-size: 12px;
+    padding: 0 0 0 20rpx;
+    color: #999;
+}
+
+.push {
+    width: 636;
+    padding: 7rpx 0 10rpx 114rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item_left {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pinpai {
+    margin: 2rpx 0 6rpx 0;
+}
+
+.fan {
+    margin: 6rpx 0 0 0;
+}
+
+.dao {
+    display: flex;
+    margin: 0 10rpx 0 0;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50rpx;
+    height: 50rpx;
+    margin: 0 10rpx 0 0;
+    border-radius: 5px;
+    font-size: 13px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(255, 142, 56, 0.85);
+}
+
+.item_right0 {
+    font-size: 14px;
+    padding: 0 20rpx 0 0;
+}
+
+.pic_miao {
+    padding: 10rpx 0 0 115rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color:rgba(255, 142, 56, 0.8);
+    font-size: 12px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 50rpx;
+    bottom: 130rpx;
+}
+.pic_add{
+    width: 35rpx;
+    height: 35rpx;
+}

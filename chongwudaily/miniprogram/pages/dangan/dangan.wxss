@@ -23,17 +23,6 @@
     border-radius: 50%;
     overflow: hidden;
     border: solid 1rpx #707070;
-    z-index: 100;
-}
-.lei_pic{
-    width: 35rpx;
-    height: 35rpx;
-    background-color: #ffffff;
-    border-radius:50% ;
-    position: absolute;
-    left: 163rpx;
-    top: 130rpx;
-    z-index: 101;
 }
 .con_zhu{
     display: flex;
@@ -74,9 +63,63 @@
     color: #999999;
 
 }
-.tian {
+.color{
     display: flex;
     align-items: center;
+}
+
+.lei_pic{
+    width: 35rpx;
+    height: 37rpx;
+    background-color: #ffffff;
+    border-radius:50% ;
+    margin: 0 0 0 7rpx;
+}
+
+
+.backnews {
+    height: 85vh;
+    width: 750rpx;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 3vh 0 3vh 0;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    color: #505050;
+}
+
+.pickong {
+    margin:0 0 50rpx 0;
+    width: 192rpx;
+    height: 192rpx;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    /* background-color: #fcfcee; */
+}
+
+.add{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color:rgba(255, 142, 56, 0.8);
+    font-size: 12px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 50rpx;
+    bottom: 130rpx;
+}
+.pic_add{
+    width: 35rpx;
+    height: 35rpx;
 }

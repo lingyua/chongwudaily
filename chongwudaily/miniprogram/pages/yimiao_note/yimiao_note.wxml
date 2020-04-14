@@ -1,15 +1,36 @@
 <!-- miniprogram/pages/yimiao_note/yimiao_note.wxml -->
-<van-panel>
-    <view class="cw_info" slot="header">
-        <image class="userinfo-avatar" ></image>
-        <view class="headinfo">
-            <text class="userinfo-nickname">超级大黄</text>
-            <view class="nowtime">2020-03-21 16:35</view>
+<view class="note" wx:for="{{arryimiao}}" wx:key="id">
+    <view class="cw_info" slot="header" bindtap="to_bianji">
+        <image class="cw-avatar"></image>
+        <view class="head">
+            <text class="cw-nickname">{{item.xuan_chong}}</text>
+            <text class="now_time">{{item.zhu_time}}</text>
         </view>
     </view>
-    <view class="push">
-        <view class="item">时间：</view>
-        <view class="item">地点：</view>
-        <view class="item">项目：</view>
+    <view class="push" bindtap="to_bianji">
+        <view class="item_left">
+            <view class="pinpai">{{item.id_pai}}</view>
+            <view class="fan">{{item.fan_zhu}}</view>
+        </view>
+        <view class="item_right1">
+            <van-count-down use-slot time="{{ time }}" bind:change="onChange">
+                <view class="dao">
+                    <view class="item">{{ timeData.days }}</view>
+                    <view class="item">{{ timeData.hours }}</view>
+                    <view class="item">{{ timeData.minutes }}</view>
+                    <view class="item">{{ timeData.seconds }}</view>
+                </view>
+            </van-count-down>
+        </view>
+        <!-- 未开启提醒时由具体时间代替倒计时 -->
+        <!-- <view class="item_right0">2020-03-21 16:35</view> -->
     </view>
-</van-panel>
+    <view class="pic_miao">
+    <van-uploader file-list="{{ fileList }}" preview-size="80px"  disabled max-count="3" deletable="{{false}}"/>
+        
+    </view>
+</view>
+<view class="add" bindtap="to_yimiao">
+    <image src="../../img/j2.png" class="pic_add" />
+    <text >添加</text>
+</view>
